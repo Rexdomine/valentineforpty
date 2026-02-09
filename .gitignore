@@ -1,0 +1,9 @@
+.DS_Store
+
+# Optional: keep personal media out of git
+/assets/song.mp3
+/assets/*.mp3
+/assets/*.m4a
+/assets/*.wav
+/assets/roses.gif
+/assets/*.gif

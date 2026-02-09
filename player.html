@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Best Decision Ever</title>
+    <meta name="theme-color" content="#ff2f6d" />
+    <link rel="stylesheet" href="./styles/site.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="card" aria-label="Music card">
+        <div class="inner">
+          <div class="playerGrid">
+            <div class="panel">
+              <div class="panelHeader">
+                <h2>Play me</h2>
+                <p>Auto-play will start because you clicked “Yes”. If it doesn’t, hit play once.</p>
+              </div>
+              <div class="panelBody">
+                <div class="audioWrap">
+                  <audio id="audio" preload="auto" playsinline>
+                    <source src="./assets/song.mp3" type="audio/mpeg" />
+                  </audio>
+
+                  <div class="playerControls" id="playerControls" aria-label="Audio controls">
+                    <button class="pcPlay" id="pcPlay" type="button" aria-label="Play">
+                      <span class="pcPlayGlow" aria-hidden="true"></span>
+                      <svg id="pcIconPlay" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                        <path d="M8 5v14l12-7z" fill="currentColor"></path>
+                      </svg>
+                      <svg id="pcIconPause" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" style="display:none">
+                        <path d="M7 5h4v14H7zm6 0h4v14h-4z" fill="currentColor"></path>
+                      </svg>
+                    </button>
+
+                    <div class="pcCenter">
+                      <div class="pcMeta">
+                        <div class="pcKicker">Now playing</div>
+                        <div class="pcTitle">Crayon - TeTe</div>
+                      </div>
+
+                      <div class="pcBar">
+                        <div class="pcTime" id="pcTimeNow">0:00</div>
+                        <input class="pcSeek" id="pcSeek" type="range" min="0" max="1000" step="1" value="0" aria-label="Seek" />
+                        <div class="pcTime pcTimeEnd" id="pcTimeEnd">0:00</div>
+                      </div>
+                    </div>
+
+                    <div class="pcViz" id="pcViz" aria-hidden="true">
+                      <span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+
+                  <div class="bigMsg" id="autoplayMsg" hidden>
+                    Auto-play was blocked by the browser. Tap play to start.
+                  </div>
+
+                  <div class="gifStage" aria-label="Roses">
+                    <img id="roseGif" src="./assets/roses.gif" alt="A cartoon giving roses" />
+                    <div class="badgeText" id="bestText">Best decision ever</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel">
+              <div class="panelHeader">
+                <h2>Lyrics</h2>
+              </div>
+              <div class="lyrics" id="lyrics" aria-label="Lyrics"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/player.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Valentine?</title>
+    <meta name="theme-color" content="#ff2f6d" />
+    <link rel="stylesheet" href="./styles/site.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="card" aria-label="Valentine card">
+        <div class="hearts" aria-hidden="true" id="hearts"></div>
+        <div class="inner">
+          <h1 class="h1">Will you be my valentine?</h1>
+          <p class="sub">Pick wisely. The <span class="kbd">No</span> option is... shy.</p>
+
+          <div class="choiceStage" id="choiceStage" aria-label="Choices">
+            <div class="choiceRow" id="choiceRow">
+              <button class="btn btn-primary yesBtn" id="yesBtn" type="button">Yes</button>
+              <button class="btn btn-ghost noBtn" id="noBtn" type="button">No</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/landing.js"></script>
+  </body>
+</html>
