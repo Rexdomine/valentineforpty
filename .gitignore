@@ -1,9 +1,5 @@
 .DS_Store
 
-# Optional: keep personal media out of git
-/assets/song.mp3
-/assets/*.mp3
+# Keep personal media out of git (except the site assets we deploy)
 /assets/*.m4a
 /assets/*.wav
-/assets/roses.gif
-/assets/*.gif
